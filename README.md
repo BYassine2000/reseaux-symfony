@@ -1,6 +1,6 @@
-# CrewEvent
+# reseaux-symfony
 
-  ![alt text](https://github.com/CrewEvent/CrewEvent/blob/master/public/images/crewevent.png?raw=true)
+  ![alt text](https://github.com/BYassine2000/reseaux-symfony/blob/master/public/images/crewevent.png?raw=true)
 
 ## Description
 
@@ -22,7 +22,7 @@ Tout d'abord, clonez le projet localement :
 
 ```bash
   git clone https://github.com/BYassine2000/reseaux-symfony
-  cd reseaux-symfony
+  cd reseaux-symfony 
 ```
 
 Installez les dépendances avec :
@@ -96,7 +96,7 @@ Sur certains systèmes d'exploitation différents, comme Mac et Linux, il peut �
 
 ## Fonctionnalités 
 
-Voici la liste des fonctionnalités de l'application CrewEvent :
+Voici la liste des fonctionnalités de l'application :
 
 - Système de connexion et d'inscription
 - Gestionnaire de contacts
