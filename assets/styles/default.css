@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* @import "~bootstrap"; */
+@import '~mdb-ui-kit/css/mdb.min.css';
+@import "~bootstrap";
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-control:focus {
+    color: white;
+    background-color: white;
+    border-color: white;
+    outline: 0;
+    box-shadow: none
+}
+
+/* end partie publication */
+
+/* nav bar */
+navbar-nav .active {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.55);
+}
+
+/* end nav bar */

@@ -1,0 +1,46 @@
+
+<div class="" id="chat2">
+    <div class="p-3 bg-primary bg-opacity-10 border border-primary border rounded mb-2">
+  		<h3># Chat général</h3>
+	</div>
+  <div class="card-body overflow-auto " id="chat-scroll-el"  style="position: relative; height: 600px">
+
+    
+      {# <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;"> #}
+      <div class="d-flex flex-row justify-content-start mb-2">
+
+        {# Tous les nouveaux messages seront display ici dans le turbo_stream #}
+          <div id="messages" {{ turbo_stream_listen(canal) }}>
+            
+          </div>
+      </div>
+    
+    {# <div class="divider d-flex align-items-center mb-4">
+      <p class="text-center mx-3 mb-0" style="color: #a2aab7;">Today</p>
+    </div> #}
+
+  </div>
+
+    {# C'est le formulaire d'envoie de message à chaque post c'est juste cette partie et le turbo qui change la page ne change pas #}
+  <turbo-frame id="message_form">
+    {{ form_start(form) }}
+    <div class="card-footer text-muted d-flex  align-items-center p-3">
+      {{form_widget(form.message)}}
+      <button class="btn btn-white" type="submit">
+        <i class="fas fa-paper-plane fa-2x"></i>
+      </button>
+    </div>
+    {{form_end(form)}}
+  </turbo-frame>
+</div>
+
+
+<script>
+	var objDiv = document.getElementById("chat-scroll-el");
+  objDiv.scrollTop = objDiv.scrollHeight;
+</script>
+
+
+
+
+

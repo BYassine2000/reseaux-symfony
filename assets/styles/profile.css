@@ -1,0 +1,28 @@
+
+
+/* start of  profile css */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* impprt bootstrap */
+
+@import '~mdb-ui-kit/css/mdb.min.css';
+@import "~bootstrap";
+
+body {
+    
+    margin-top: 20px;
+    background-color: #eee;
+    font-family: 'Inter', sans-serif;
+    overflow-y: scroll;
+    font-family: Open Sans, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    color: #525f7f;
+    
+}
+

@@ -1,0 +1,16 @@
+{# <!-- 
+Page d'édition du profil
+route: /profile/edit
+route_name: app_edit_profile
+--> #}
+
+{% extends 'pages_base.html.twig' %}
+
+{% block title %}
+  Edition du profil
+{% endblock %}
+
+{% block body %}
+  {{include('partials/_edit_profil.html.twig')}}
+  
+{% endblock %}

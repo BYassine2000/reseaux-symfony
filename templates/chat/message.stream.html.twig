@@ -1,0 +1,28 @@
+{# chat/message.stream.html.twig #}
+
+{# Les nouveaux messages reçu par mercure sont mis dans le div de partials/_chat.html.twig "messages" ID. #}
+<turbo-stream action="append" target="messages">
+     <template>
+
+         <div class="card mb-4 ">
+             <div class="card-header d-flex justify-content-between p-2 align-items-center">
+                 <p class="fw-bold mb-0" id="username">{{app.user.username}}</p>&nbsp;&nbsp;
+                 <p class="text-muted small mb-0">
+                     <i class="far fa-clock"></i>
+                     &nbsp;&nbsp;{{"now"|date("H:s") }}</p>
+             </div>
+             <div class="card-body">
+                 <p class="mb-0">
+                     {{message}}
+                 </p>
+             </div>
+         </div>
+         <script>
+             var objDiv = document.getElementById("chat-scroll-el");
+             objDiv.scrollTop = objDiv.scrollHeight;
+         </script>
+	</template>
+</turbo-stream>
+
+
+

@@ -1,0 +1,15 @@
+{# <!-- 
+On regarde ici le profil d'un utilisateur 
+route: /show_profile 
+route_name: app_show_profile
+--> #}
+
+{% extends 'default_base.html.twig' %}
+
+{% block title %}Page de profil de 
+{{user.prenom}}
+{% endblock %}
+
+{% block body %}
+{{include('partials/_show-profile.html.twig')}}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'default_base.html.twig' %}
+
+{% block title %}Welcome home{% endblock %}
+
+
+{% block body %}
+    <div class="my-3 row">
+
+        <div class="col-xxl-3 border-3">
+            {{ include('partials/_home_left_sidebar.html.twig') }}
+        </div>
+
+        <div class="col-xxl-6 border-3 d-flex flex-column">
+
+            {{include('partials/_new_post.html.twig')}}
+            {{include('partials/_publication.html.twig')}}
+
+        </div>
+
+        <div class="col-xxl-3  border-3">
+            {{ include('partials/_home_right_sidebar.html.twig') }}
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+
+<div class="text-center my-3">
+    <h2>Messagerie</h2>
+</div>
+<div class="container">
+
+    <div class="list-group">
+        {% for member in members %}
+            {# On ne veut pas que l'utilisateur tchat avec lui méme donc on teste et ion met l'utilisateur #}
+            {% if app.user.username == member.username %}
+                <a href="{{path('send_private_message', {username : member.otherUsername})}}"  class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img src="{{asset('images/pas_de_photo.png')}}" alt="avatar" class="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                            <div>
+                                <h5 class="mb-1 text-primary">{{member.otherUsername}}</h5>
+                                <small class="text-muted">{{member.lastMessage}}</small>
+                            </div>
+
+                        </div>
+                        <div class="">
+                            {% if member.updatedAt|date("Y-m-d") == "now"|date("Y-m-d") %}
+                                <small class="text-muted">aujourd'hui à {{member.updatedAt|date("H:s") }}</small>
+                            {% else %}
+                                <small class="text-muted"> {{member.updatedAt|date("d M Y ") }}</small>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </a>
+            {% else %}
+
+                <a href="{{path('send_private_message', {username : member.username})}}"  class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img src="{{asset('images/pas_de_photo.png')}}" alt="avatar" class="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                            <div>
+                                <h5 class="mb-1 text-primary">{{member.username}}</h5>
+                                <small class="text-muted">{{member.lastMessage}}</small>
+                            </div>
+
+                        </div>
+                        <div class="">
+                            {% if member.updatedAt|date("Y-m-d") == "now"|date("Y-m-d") %}
+
+                                <small class="text-muted">aujourd'hui {{member.updatedAt|date("H-i-s:") }}</small>
+                            {% else %}
+                                 <small class="text-muted"> {{member.updatedAt|date("d M Y ") }}</small>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    <div class="text-center">
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

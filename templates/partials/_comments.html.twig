@@ -1,0 +1,14 @@
+
+{% for item in feed.comments %}
+    <div class="card mx-xxl-5">
+        <div class="card-header bg-transparent d-flex justify-content-start align-items-center">
+            <span>{{item.commenter}}</span>
+        </div>
+        <div class="card-body">
+                <span class="small ">
+                    {{item.comment}}
+                </span>
+        </div>
+    </div>
+{% endfor %}
+

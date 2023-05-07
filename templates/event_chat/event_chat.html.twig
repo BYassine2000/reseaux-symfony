@@ -1,0 +1,39 @@
+{% extends 'default_base.html.twig' %}
+
+{# Page de l'événement #}
+
+{% block title %}
+	Chattons !
+	{{ event.name }}
+{% endblock %}
+
+{% block body %}
+	{# On affiche juste la side bar et la liste des participants #}
+	{% for message in app.flashes('danger') %}
+		<div class="alert alert-danger">
+			{{ message }}
+		</div>
+	{% endfor %}
+
+	<div class="row my-3">
+		<div class="col-xxl-3">
+
+   {{ include('partials/_sidebar.html.twig',{
+				"general" : "link-dark",
+				"news" : "link-dark",
+				"chat" : "link-white active"
+			})}}
+
+	</div>
+
+	<div class="col-xxl-6 ">
+		{{ include('partials/_chat.html.twig') }}
+	</div>
+
+  <div class="col-xxl-3 ">
+  
+      {{include('partials/_partie_sub.html.twig')}}
+  </div>
+</div>
+{% endblock %}
+
