@@ -21,8 +21,8 @@ D'abord, assurez-vous d'avoir une version de PHP supérieure à 8.1 et une versi
 Tout d'abord, clonez le projet localement :
 
 ```bash
-  git clone https://github.com/CrewEvent/CrewEvent.git
-  cd CrewEvent
+  git clone https://github.com/BYassine2000/reseaux-symfony
+  cd reseaux-symfony
 ```
 
 Installez les dépendances avec :
@@ -126,14 +126,3 @@ php bin/console doctrine:fixtures:load
 **Client:** Bootstrap, Twig, Html and css
 
 **Server:** PHP, Symfony
-
-## Support
-
-Si vous avez besoin de support, rejoignez notre groupe Discord : https://discord.gg/yCdvSf2Y. 
-Nous sommes disponibles et ouverts à toutes vos questions.
-
-
-
-## Les leçons
-
-Pendant un temps limité, nous avons pris en main Symfony et, pour beaucoup d'entre nous, cela a été notre premier projet. Nous avons appris beaucoup de choses, notamment en matière de gestion de projet avec l'application GitHub, de travail en équipe et de recherche d'informations parfois difficiles à trouver. 
